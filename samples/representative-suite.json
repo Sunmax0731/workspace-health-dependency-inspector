@@ -1,0 +1,138 @@
+{
+  "product": "workspace-health-dependency-inspector",
+  "title": "ワークスペース健全性・依存関係インスペクター",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "workspace",
+    "nodeVersion",
+    "gitStatus",
+    "requiredFiles"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "VS CodeワークスペースのNode、Git状態、必須ファイル、依存関係の正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "workspace-health-dependency-inspector-happy",
+            "title": "ワークスペース健全性・依存関係インスペクター happy",
+            "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "workspace-health-dependency-inspector-missing-required",
+            "title": "ワークスペース健全性・依存関係インスペクター missing-required",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "workspace-health-dependency-inspector-blocked",
+            "title": "ワークスペース健全性・依存関係インスペクター blocked",
+            "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "workspace-health-dependency-inspector-happy",
+            "title": "ワークスペース健全性・依存関係インスペクター happy",
+            "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "ready"
+          },
+          {
+            "id": "workspace-health-dependency-inspector-missing-required",
+            "title": "ワークスペース健全性・依存関係インスペクター missing-required",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "ready"
+          },
+          {
+            "id": "workspace-health-dependency-inspector-blocked",
+            "title": "ワークスペース健全性・依存関係インスペクター blocked",
+            "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
+            "nodeVersion": "v24.14.0",
+            "gitStatus": "clean",
+            "requiredFiles": [
+              "README.md",
+              "docs/manual-test.md"
+            ],
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}

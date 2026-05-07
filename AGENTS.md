@@ -14,3 +14,9 @@
 
 - QCDS各観点は最低 A-、完成判断は S-/S+ を目標にします。
 - `npm test` は自動テストに加えて `tools/qcds-evaluate.cjs` を実行します。
+
+## Remote QCDS Benchmark Rules
+
+- 厳格評価では、ほかのリモートリポジトリで運用されているQCDS証跡を先に確認する。
+- 代表シナリオ、機械可読metrics、回帰ベースライン、Security/Privacy、Traceabilityを満たさない場合はS評価にしない。
+- movie-telop-transcriber と codex-remote-android を比較基準にする。

@@ -29,6 +29,8 @@
   "keywords": [
     "vscodeextension",
     "qcds",
-    "pre-release"
+    "pre-release",
+    "strict-qcds",
+    "representative-suite"
   ]
 }

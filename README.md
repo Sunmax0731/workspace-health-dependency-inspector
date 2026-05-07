@@ -35,3 +35,13 @@ code --extensionDevelopmentPath="D:\AI\VSCodeExtension\workspace-health-dependen
 - docs/release-checklist.md
 - docs/post-mvp-roadmap.md
 - docs/qcds-evaluation.md
+
+## 厳格QCDS評価
+
+- docs/qcds-remote-benchmark.md
+- docs/qcds-strict-gap-analysis.md
+- docs/qcds-strict-evaluation.md
+- docs/qcds-strict-metrics.json
+- docs/security-privacy-checklist.md
+- docs/traceability-matrix.md
+- docs/strict-manual-test-addendum.md

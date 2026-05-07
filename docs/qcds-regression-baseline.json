@@ -1,0 +1,44 @@
+{
+  "product": "workspace-health-dependency-inspector",
+  "benchmark": "remote-qcds-strict",
+  "sourceRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "scenarioExpectations": [
+    {
+      "id": "happy-path",
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ],
+  "minimumScenarioCount": 4,
+  "strictTarget": "S+ when all checks pass"
+}
