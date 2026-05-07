@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "workspace-health-1",
+      "title": "ワークスペース状態・依存・健康診断 サンプル 1",
+      "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
+      "nodeVersion": "v24.14.0",
+      "gitStatus": "clean",
+      "requiredFiles": [
+        "README.md",
+        "docs/manual-test.md"
+      ]
+    },
+    {
+      "id": "workspace-health-missing-required",
+      "title": "必須項目不足サンプル",
+      "nodeVersion": "v24.14.0",
+      "gitStatus": "clean",
+      "requiredFiles": [
+        "README.md",
+        "docs/manual-test.md"
+      ]
+    }
+  ]
+}
