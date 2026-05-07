@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "workspace-health-dependency-inspector-docs.zip 10172 bytes"
+          "detail": "workspace-health-dependency-inspector-docs.zip exists and exceeds minimum size"
         }
       ]
     },

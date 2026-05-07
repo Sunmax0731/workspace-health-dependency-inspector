@@ -127,7 +127,7 @@ function docsZip() {
   const zip = fs.readdirSync(dist).find((file) => file.endsWith('-docs.zip'));
   if (!zip) return { pass: false, detail: 'zip missing' };
   const size = fs.statSync(path.join(dist, zip)).size;
-  return { pass: size >= 9000, detail: zip + ' ' + size + ' bytes' };
+  return { pass: size >= 9000, detail: zip + ' exists and exceeds minimum size' };
 }
 
 function metricFile() {
