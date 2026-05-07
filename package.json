@@ -1,10 +1,10 @@
 {
   "name": "workspace-health-dependency-inspector",
-  "displayName": "ワークスペース状態・依存・健康診断",
+  "displayName": "ワークスペース健全性・依存関係インスペクター",
   "version": "0.1.0",
   "publisher": "sunmax0731",
   "private": false,
-  "description": "VS Codeワークスペースの依存、Git状態、必要ファイルを確認し、健康診断レポートを表示する。",
+  "description": "VS CodeワークスペースのNode、Git状態、必須ファイル、依存関係を確認する。",
   "main": "./extension.js",
   "engines": {
     "vscode": "^1.90.0"
@@ -16,7 +16,7 @@
     "commands": [
       {
         "command": "workspace-health-dependency-inspector.openReview",
-        "title": "ワークスペース状態・依存・健康診断: レビューを開く"
+        "title": "ワークスペース健全性・依存関係インスペクター: レビューを開く"
       }
     ]
   },
@@ -25,5 +25,10 @@
     "validate": "npm test"
   },
   "devDependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "vscodeextension",
+    "qcds",
+    "pre-release"
+  ]
 }

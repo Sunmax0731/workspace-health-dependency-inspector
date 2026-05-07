@@ -1,22 +1,37 @@
 # workspace-health-dependency-inspector
 
-ワークスペース状態・依存・健康診断 の MVP リポジトリです。
+ワークスペース健全性・依存関係インスペクター は、VS CodeワークスペースのNode、Git状態、必須ファイル、依存関係を確認する。
 
-## 概要
+## 対象ユーザー
 
-VS Codeワークスペースの依存、Git状態、必要ファイルを確認し、健康診断レポートを表示する。
+- VS Codeで複数リポジトリを扱う開発者
 
-## 現在の範囲
+## 主な価値
 
-- 入力データを検査し、必須項目の不足と注意状態をレポート化する。
-- 自動テストで正常系と必須項目不足を検証する。
-- 手動テスト手順は `docs/manual-test.md` にまとめる。
-- 公開前チェックは `docs/release-checklist.md` を基準にする。
+- 必須項目の不足を自動検出します。
+- 手動テスト、導入手順、リリース前確認を同じドキュメント体系で確認できます。
+- 競合プロダクトと公式標準を基準に、QCDSを実装とドキュメントの両方で評価します。
 
-## 検証
+## 使い方
 
 ```powershell
+cd D:\AI\VSCodeExtension\workspace-health-dependency-inspector
 npm test
+code --extensionDevelopmentPath="D:\AI\VSCodeExtension\workspace-health-dependency-inspector"
 ```
 
-Unity パッケージの場合は `tools/test-package-structure.ps1` が構造検証を実行します。
+## ドキュメント
+
+- docs/requirements.md
+- docs/specification.md
+- docs/design.md
+- docs/implementation-plan.md
+- docs/test-plan.md
+- docs/manual-test.md
+- docs/installation-guide.md
+- docs/user-guide.md
+- docs/competitive-benchmark.md
+- docs/evaluation-criteria.md
+- docs/release-checklist.md
+- docs/post-mvp-roadmap.md
+- docs/qcds-evaluation.md

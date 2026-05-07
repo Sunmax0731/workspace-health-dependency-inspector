@@ -1,7 +1,9 @@
-# リリース前まとめ
+# リリース前確認
 
-- Rank: 19
-- Domain: VSCodeExtension
-- Repository: workspace-health-dependency-inspector
-- MVP: 入力検査、レポート作成、自動テスト、手動テスト手順。
-- Current release readiness: 自動テスト通過後、手動テストを実施すれば v0.1.0 公開準備へ進める。
+## 確認順
+
+1. `npm test` を実行する。
+2. docs/qcds-evaluation.md の全観点がA-以上であることを確認する。
+3. docs/manual-test.md を実施する。
+4. docs/release-checklist.md の未完了項目を確認する。
+5. docs/competitive-benchmark.md の差別化がREADMEとユーザーガイドに反映されているか確認する。

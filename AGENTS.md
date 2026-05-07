@@ -1,24 +1,16 @@
 # AGENTS
 
-このリポジトリは `ワークスペース状態・依存・健康診断` の MVP 実装です。
+このリポジトリは ワークスペース健全性・依存関係インスペクター のMVP後改善版です。作業前に README.md、SKILL.md、docs/competitive-benchmark.md、docs/evaluation-criteria.md、docs/manual-test.md を確認してください。
 
 ## 作業ルール
 
-- 作業開始時は `README.md`、`AGENTS.md`、`SKILL.md`、`docs/requirements.md`、`docs/manual-test.md` を確認する。
-- 作業ブランチは `codex/<task-summary>` を1本だけ使い、工程完了ごとに `main` へ merge する。
-- 文字化けした参照docsを正式docsへコピーしない。正式docsは正常な日本語で再生成する。
-- 追加ツールをインストールする場合は `E:\DevEnv` 以下へ配置する。
-- 失敗や回避策が発生した場合は、このファイルまたは `SKILL.md` に短く追記する。
+- 作業ブランチは `codex/<task-summary>` を1本だけ使い、工程完了ごとに `main` へmergeします。
+- 評価は実装だけでなく、README、導入手順、ユーザーガイド、手動テスト、開発ドキュメント、リリース前資料まで含めます。
+- 競合比較は VS Code Extension API、GitHub Desktop、PowerToys Run を参照し、公式標準と差別化を docs/competitive-benchmark.md に残します。
+- 新しいツールを追加する場合は C ドライブではなく `E:\DevEnv` 以下を使います。
+- 文字化け、手戻り、検証不足を見つけた場合は SKILL.md に短い再発防止策を追記します。
 
-## 現在の状態
+## 現在の評価ゲート
 
-- Rank: 19
-- Domain: VSCodeExtension
-- Source idea No: 1
-- Publish target: GitHub Release / VSIX
-
-## Product Polish Rules
-
-- MVP後の改善では、機能、UI/UX、責務分割、テスト、リリース準備を同時に確認する。
-- QCDS評価は `docs/qcds-evaluation.md` を正とし、全観点 `A-` 以上になるまで改善する。
-- 今後の別アイデアでも、`docs/responsibility-map.md` と `docs/ui-ux-polish.md` をMVP後の標準成果物にする。
+- QCDS各観点は最低 A-、完成判断は S-/S+ を目標にします。
+- `npm test` は自動テストに加えて `tools/qcds-evaluate.cjs` を実行します。

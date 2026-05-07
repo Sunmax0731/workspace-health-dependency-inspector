@@ -10,7 +10,7 @@ function validateRequiredFields(items, requiredFields, titleJa) {
           itemId: item.id || item.title || `item-${index + 1}`,
           field,
           message: `${field} が未設定です`,
-          nextAction: `${titleJa} の手動テスト前に ${field} を入力してください`
+          nextAction: `${titleJa} の手動確認前に ${field} を入力してください`
         });
       }
     }
@@ -26,7 +26,7 @@ function validateStatus(items) {
         level: 'warning',
         itemId: item.id || item.title || `item-${index + 1}`,
         field: 'status',
-        message: '状態に失敗または保留が含まれています',
+        message: '状態に失敗または保留を示す値が含まれています',
         nextAction: 'ログと手動テスト手順を確認してください'
       });
     }

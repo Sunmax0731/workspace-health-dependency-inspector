@@ -3,9 +3,9 @@ function buildReviewModel(report) {
   const resolvedChecks = Math.max(0, totalChecks - report.summary.errors);
   const completionRate = Math.round((resolvedChecks / totalChecks) * 100);
   const nextActions = report.findings.length === 0
-    ? ['手動テストを実施し、release-checklist に結果を反映する']
+    ? ['手動テストを実施し、docs/release-checklist.md に結果を反映する']
     : report.findings.slice(0, 5).map((finding) => finding.nextAction);
-  const statusLabel = report.summary.errors > 0 ? '要修正' : report.summary.warnings > 0 ? '要確認' : '公開前確認へ進行可';
+  const statusLabel = report.summary.errors > 0 ? '修正が必要' : report.summary.warnings > 0 ? '確認が必要' : '公開前確認へ進行可';
   return {
     statusLabel,
     completionRate,
@@ -13,7 +13,7 @@ function buildReviewModel(report) {
     cards: [
       { label: '対象', value: String(report.summary.totalItems) },
       { label: '不足', value: String(report.summary.errors) },
-      { label: '確認', value: String(report.summary.warnings) },
+      { label: '警告', value: String(report.summary.warnings) },
       { label: '完了率', value: `${completionRate}%` }
     ]
   };

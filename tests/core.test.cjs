@@ -4,8 +4,9 @@ const { analyzeItems, renderMarkdownReport } = require('../src/core.cjs');
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "workspace-health-1",
-  "title": "ワークスペース状態・依存・健康診断 サンプル 1",
+  "id": "workspace-health-dependency-inspector-1",
+  "title": "ワークスペース健全性・依存関係インスペクター サンプル1",
+  "status": "ready",
   "workspace": "D:\\AI\\VSCodeExtension\\workspace-health-dependency-inspector",
   "nodeVersion": "v24.14.0",
   "gitStatus": "clean",
@@ -20,8 +21,9 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "workspace-health-missing-required",
+  "id": "workspace-health-dependency-inspector-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "nodeVersion": "v24.14.0",
   "gitStatus": "clean",
   "requiredFiles": [

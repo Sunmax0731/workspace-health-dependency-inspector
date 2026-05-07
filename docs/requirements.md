@@ -2,26 +2,23 @@
 
 ## 目的
 
-VS Codeワークスペースの依存、Git状態、必要ファイルを確認し、健康診断レポートを表示する。
+ワークスペース健全性・依存関係インスペクター は、VS CodeワークスペースのNode、Git状態、必須ファイル、依存関係を確認する。
 
-## 対象ユーザー
+## MVP範囲
 
-- 100本公開計画の制作、検証、公開を短い周期で回す開発者。
-- AIエージェント作業の結果を、手動確認と公開前証跡に落とし込みたいユーザー。
-
-## MVP機能
-
-- 入力データを読み込み、対象項目を一覧化する。
-- 必須項目 `workspace`, `nodeVersion`, `gitStatus`, `requiredFiles` の不足を検出する。
-- 結果を JSON と Markdown のレポートとして保存する。
+- 入力データから必須項目の不足を検出する。
+- 結果をJSON、Markdown、HTMLまたはホストアプリ内UIで確認できるようにする。
 - 自動テストと手動テスト手順を同梱する。
+- 競合比較にもとづく評価基準を docs/evaluation-criteria.md に保持する。
 
-## 受け入れ条件
+## 対象外
 
-- 正常なサンプル入力で自動テストが成功する。
-- 必須項目不足のサンプルでエラーが検出される。
-- 手動テスト準備、手順、期待結果が `docs/manual-test.md` で確認できる。
+- 実ファイルの破壊的な変更。
+- 外部APIへの本番実行。
+- ユーザー承認なしの公開、配布、削除。
 
-## 参照
+## 成功条件
 
-参照元 ZIP: `D:\AI\VSCodeExtension\created_idea_001_workspace-health-dependency-inspector\idea_001_workspace-health-dependency-inspector.zip`。一部に文字化けがあったため、正式docsは `PICKUP_100_IDEAS.md` とドメインガイドから再構成した。
+- `npm test` が成功する。
+- docs/qcds-evaluation.md のQCDS全観点が A- 以上である。
+- 導入手順、ユーザーガイド、手動テスト手順が利用者目線で読める。

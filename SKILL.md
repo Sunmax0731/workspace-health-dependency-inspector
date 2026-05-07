@@ -2,19 +2,14 @@
 
 ## Start Order
 
-1. `docs/requirements.md` で MVP 境界を確認する。
-2. `docs/specification.md` で入力、処理、出力を確認する。
-3. `docs/design.md` で画面または操作面の意図を確認する。
-4. 実装後に `npm test` または記載された構造検証を実行する。
-5. 手動確認が必要な箇所は `docs/manual-test.md` に具体的な手順として残す。
+1. docs/competitive-benchmark.md で競合と公式基準を確認します。
+2. docs/evaluation-criteria.md でQCDS評価範囲を確認します。
+3. docs/requirements.md、docs/specification.md、docs/design.md で要件、仕様、責務を確認します。
+4. 実装後に `npm test` を実行し、docs/qcds-evaluation.md を再生成します。
+5. 手動確認が必要な範囲は docs/manual-test.md と docs/user-guide.md に具体手順として残します。
 
 ## Lessons
 
-- 参照元 ZIP に文字化けがある場合は、その本文を採用せず、ピックアップ一覧とドメインガイドから正式docsを再作成する。
-- このMVPでは、破壊的操作や外部API実行は行わず、dry-run とレポート作成に閉じる。
-
-## Product Polish Lessons
-
-- コア検査、レビュー導線、表示は分ける。単一の `core` に全責務を残さない。
-- UIは結果本文だけでなく、状態、完了率、次アクションを表示する。
-- QCDS評価は改善後に再生成し、`A-` 未満の観点があれば同じブランチで直す。
+- 文字化けした生成物は正式ドキュメントとして扱わず、利用者が読める日本語で再作成します。
+- QCDSは実装スコアではなく、導入、利用、保守、リリース判断まで含めたプロダクトスコアとして扱います。
+- 競合の強みをそのまま追うのではなく、この製品の狭い利用場面で判断が速くなるかを差別化軸にします。

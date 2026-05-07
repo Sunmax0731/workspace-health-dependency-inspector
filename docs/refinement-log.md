@@ -1,7 +1,8 @@
-# Refinement Log
+# 改善ログ
 
 ## 2026-05-08
 
-- MVP後の完成度向上として責務分割、UI/UX、QCDS評価を追加。
-- QCDS は Quality / Cost / Delivery / Satisfaction で定義し、全観点 A- 以上を目標にした。
-- 文字化けした参照元文書は正式docsへ流用しない方針を維持。
+- 競合・公式基準との比較を docs/competitive-benchmark.md に追加。
+- 評価基準を実装単体からプロダクト全体へ拡張。
+- README、導入手順、ユーザーガイド、手動テスト、開発ドキュメントを読みやすい日本語に整理。
+- QCDS評価に文字化け検出を追加。
