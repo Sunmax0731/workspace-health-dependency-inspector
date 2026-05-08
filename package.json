@@ -21,8 +21,10 @@
     ]
   },
   "scripts": {
-    "test": "node --test tests/*.test.cjs && node tools/qcds-evaluate.cjs",
-    "validate": "npm test"
+    "test": "node --test tests/*.test.cjs && node tools/qcds-evaluate.cjs && node tools/platform-runtime-gate.mjs && node tools/closed-alpha-guard.mjs",
+    "validate": "npm test",
+    "platform:gate": "node tools/platform-runtime-gate.mjs",
+    "closed-alpha:guard": "node tools/closed-alpha-guard.mjs"
   },
   "devDependencies": {},
   "license": "MIT",

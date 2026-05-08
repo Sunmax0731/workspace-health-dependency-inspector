@@ -1,0 +1,32 @@
+{
+  "product": "workspace-health-dependency-inspector",
+  "repository": "Sunmax0731/workspace-health-dependency-inspector",
+  "githubUrl": "https://github.com/Sunmax0731/workspace-health-dependency-inspector",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/workspace-health-dependency-inspector/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "workspace-health-dependency-inspector-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "vscode-extension",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/workspace-health-dependency-inspector",
+    "url": "https://github.com/Sunmax0731/workspace-health-dependency-inspector",
+    "releaseUrl": "https://github.com/Sunmax0731/workspace-health-dependency-inspector/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}

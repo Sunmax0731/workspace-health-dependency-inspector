@@ -1,0 +1,9 @@
+{
+  "product": "workspace-health-dependency-inspector",
+  "platformType": "vscode-extension",
+  "pass": true,
+  "method": "runtime-gate",
+  "manualTest": "not-run-by-codex",
+  "packagePath": "package.json",
+  "main": "extension.js"
+}
