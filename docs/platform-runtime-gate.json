@@ -1,0 +1,11 @@
+{
+  "product": "workspace-health-dependency-inspector",
+  "title": "ワークスペース状態・依存・健康診断",
+  "domain": "VSCodeExtension",
+  "ideaNo": 1,
+  "platformType": "vscode-extension",
+  "expectedPublicTarget": "GitHub Release / VSIX",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
